@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/play_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3f00">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/play_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv"
+            android:text="330" />
+
+        <TextView
+            android:id="@+id/play_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/play_singer_name"
+            android:layout_toRightOf="@+id/iv"
+            android:text="name" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/btn_playback_next" />
+
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/next"
+            android:src="@mipmap/btn_playback_pause"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/next"
+            android:src="@mipmap/btn_playback_play" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/play"
+            android:src="@mipmap/btn_playback_pre" />
+
+    </RelativeLayout>
+
+    <com.lxy.music.activity.ui.MyListView
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/play_bar"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+    <com.lxy.music.activity.ui.SearchIndex
+        android:id="@+id/letter_index"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/play_bar"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#f00"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+
+</RelativeLayout>
